@@ -1,4 +1,6 @@
 <?php
+    //session start
+    session_start();
     //Analyse de l'URL avec parse_url() et retourne ses composants
     $url = parse_url($_SERVER['REQUEST_URI']);
     //test soit l'url a une route sinon on renvoi à la racine
@@ -36,6 +38,11 @@
         case $path === "/evalmvc/connexion":
             include './controler/controler_connexion.php';
 		    break ;
+        //route /evalmvc/deco -> ./controler/controler_deconnexion.php
+        case $path === "/evalmvc/deco":
+            include './controler/controler_deconnexion.php';
+		    break ;
+            
         //route /evalmvc/error -> ./error.php
         case $path === "/evalmvc/error":
             include './error.php';
