@@ -7,7 +7,7 @@
     if(isset($_GET['id']) AND $_GET['id'] != ""){
         $article = new Article(null, null);
         $_GET['id']= intval($_GET['id']);
-        var_dump($_GET['id']);
+    
         $article->setIdArticle($_GET['id']);
         $tab = $article->showArticleById($bdd);
         $nom = $tab[0]['nom_article'];

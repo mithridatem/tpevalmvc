@@ -28,7 +28,14 @@
         case $path === "/evalmvc/deleteArticle":
             include './controler/controler_delete_article.php';
 		    break ;
-        
+        //route /evalmvc/addUser -> ./controler/controler_add_user.php
+        case $path === "/evalmvc/addUser":
+            include './controler/controler_add_user.php';
+		    break ;
+        //route /evalmvc/connexion -> ./controler/controler_connexion.php
+        case $path === "/evalmvc/connexion":
+            include './controler/controler_connexion.php';
+		    break ;
         //route /evalmvc/error -> ./error.php
         case $path === "/evalmvc/error":
             include './error.php';
